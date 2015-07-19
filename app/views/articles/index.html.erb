@@ -1,3 +1,5 @@
+<%= @articles.count %>
+
 <% @articles.each do |article| %>
 
   <p>
@@ -5,3 +7,5 @@
     <%= article.content %>
   </p>
 <% end %>
+
+<%= link_to 'Créer un article', new_article_path %>

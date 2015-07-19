@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except:  :index, unless: :devise_or_pages_controller?
   after_action :verify_policy_scoped, only: :index, unless: :devise_or_pages_controller?
 
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  rescue_from Pundit::NotAuthorizedError, with: :authenticate_userr_not_authorized
 
   private
 
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_not_authorized
-    flash[:error] = I18n.t('controllers.application.user_not_authorized', default: "You can't access this page.")
+    flash[:error] = "You are not authorized to perform this action"
     redirect_to(root_path)
   end
 end

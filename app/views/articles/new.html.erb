@@ -1,8 +1,10 @@
+<p> Hello all</p>
+
 <%= simple_form_for(@article, html: { multipart: true }) do |f| %>
 
   <%= f.input :title %>
   <%= f.hidden_field :user_id, :value => current_user.id%>
-  <%= f.text_area :content, data: {provide: "markdown"} %>
+  <%= f.text_area :content%>
   <%= f.label :picture %>
   <%= f.file_field :picture %>
 
