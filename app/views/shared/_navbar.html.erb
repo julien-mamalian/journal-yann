@@ -1,36 +1,42 @@
 <nav>
-  <div class="container-fluid navbar">
-    <ul class="navbar_ul">
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          Politique
-        <% end %>
-      </li>
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          Economie
-        <% end %>
-      </li>
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          International
-        <% end %>
-      </li>
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          Droit
-        <% end %>
-      </li>
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          Culture
-        <% end %>
-      </li>
-      <li class="navbar_link">
-        <%= link_to articles_path do %>
-          Le Havre
-        <% end %>
-      </li>
-    </ul>
+  <div class="container-fluid navigation ">
+    <div class="col-md-12 logo_space text-center">
+      <%= image_tag 'logo.png', :class => 'img-circle logo' %>
+
+    </div>
+    <div class="col-md-12 navbar text-center">
+      <ul class="navbar_ul">
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            Politique
+          <% end %>
+        </li>
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            Economie
+          <% end %>
+        </li>
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            International
+          <% end %>
+        </li>
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            Droit
+          <% end %>
+        </li>
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            Culture
+          <% end %>
+        </li>
+        <li class="navbar_link">
+          <%= link_to articles_path do %>
+            Le Havre
+          <% end %>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

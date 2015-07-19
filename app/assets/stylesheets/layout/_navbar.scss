@@ -39,13 +39,84 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
+.navigation {
+  margin-top: 25px;
 
-.navbar {
-  heigt: $navbar-height;
-  width : 100%;
-  border-bottom: thick dotted #ff0000;
-  .navbar_link {
-    display: inline;
-
+  .logo_space {
+    height: $navbar-height;
+    margin-bottom: 25px;
+    widows: 100%;
+    .logo {
+      height: 45px;
+      width: 45px;
+    }
   }
+  .navbar {
+    heigt: $navbar-height;
+    width : 100%;
+    border-bottom: 1px solid black;
+    .navbar_link {
+      display: inline;
+      margin-left: 15px;
+      margin-right: 15px;
+      font-family: Cooperhewitt-book, sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
+}
+
+@font-face{
+    font-family : "Cooperhewitt-light";
+
+    src : url('../../fonts/cooperhewitt-light-webfont.eot');
+    src : url('cooperhewitt-light-webfont.woff') format('woff'),
+          url('cooperhewitt-light-webfont.svg#abcd') format('svg'),
+          url('cooperhewitt-light-webfont.ttf') format('truetype');
+
+    font-weigth : light;
+}
+
+@font-face{
+    font-family : "Cooperhewitt-semibold";
+
+    src : url('../../fonts/cooperhewitt-semibold-webfont.eot');
+    src : url('cooperhewitt-semibold-webfont.woff') format('woff'),
+          url('cooperhewitt-semibold-webfont.svg#abcd') format('svg'),
+          url('cooperhewitt-semibold-webfont.ttf') format('truetype');
+
+    font-weigth : semibold;
+}
+
+@font-face{
+    font-family : "Cooperhewitt-medium";
+
+    src : url('../../fonts/cooperhewitt-medium-webfont.eot');
+    src : url('cooperhewitt-medium-webfont.woff') format('woff'),
+          url('cooperhewitt-medium-webfont.svg#abcd') format('svg'),
+          url('cooperhewitt-medium-webfont.ttf') format('truetype');
+
+    font-weigth : medium;
+}
+
+@font-face{
+    font-family : "Cooperhewitt-thin";
+
+    src : url('../../fonts/cooperhewitt-thin-webfont.eot');
+    src : url('cooperhewitt-thin-webfont.woff') format('woff'),
+          url('cooperhewitt-thin-webfont.svg#abcd') format('svg'),
+          url('cooperhewitt-thin-webfont.ttf') format('truetype');
+
+    font-weigth : thin;
+}
+
+@font-face{
+    font-family : "Cooperhewitt-book";
+
+    src : url('../../fonts/cooperhewitt-book-webfont.eot');
+    src : url('cooperhewitt-book-webfont.woff') format('woff'),
+          url('cooperhewitt-book-webfont.svg#abcd') format('svg'),
+          url('cooperhewitt-book-webfont.ttf') format('truetype');
+
+    font-weigth : book;
 }
