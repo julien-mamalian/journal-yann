@@ -1,11 +1,12 @@
 <%= @articles.count %>
 
 <% @articles.each do |article| %>
-
-  <p>
-    <%= article.title %>
-    <%= article.content %>
-  </p>
+  <% if article.themes.downcase == params[:themes] %>
+    <p>
+      <%= article.title %>
+      <%= article.content %>
+    </p>
+  <% end %>
 <% end %>
 
 <%= link_to 'Créer un article', new_article_path %>

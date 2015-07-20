@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_article, only: [:show, :edit, :update, :create, :destroy]
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -16,8 +16,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    authorize @article
     @article = current_user.articles.build(article_params)
+    authorize @article
     @article.save
 
     redirect_to root_path
