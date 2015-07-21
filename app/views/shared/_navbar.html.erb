@@ -6,33 +6,38 @@
       <div class="col-md-12 navbar text-center">
         <ul class="navbar_ul">
           <li class="navbar_link">
+            <%= link_to root_path do %>
+              <i class="fa fa-home"></i> Home
+            <% end %>
+          </li>
+          <li class="navbar_link">
             <%= link_to 'http://localhost:3000/politique' do %>
-              Politique
+              <i class="fa fa-university"></i> Politique
             <% end %>
           </li>
           <li class="navbar_link">
             <%= link_to 'http://localhost:3000/economie' do %>
-              Economie
+              <i class="fa fa-eur"></i> Economie
             <% end %>
           </li>
           <li class="navbar_link">
             <%= link_to 'http://localhost:3000/international' do %>
-              International
+              <i class="fa fa-globe"></i> International
             <% end %>
           </li>
           <li class="navbar_link">
             <%= link_to 'http://localhost:3000/droit' do %>
-              Droit
+              <i class="fa fa-gavel"></i> Droit
             <% end %>
           </li>
           <li class="navbar_link">
             <%= link_to 'http://localhost:3000/culture' do %>
-              Culture
+              <i class="fa fa-book"></i> Culture
             <% end %>
           </li>
           <li class="navbar_link">
             <%= link_to 'http://localhost:3000/le-havre' do %>
-              Le Havre
+              <i class="fa fa-building-o"></i> Le Havre
             <% end %>
           </li>
         </ul>

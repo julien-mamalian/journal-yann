@@ -13,12 +13,12 @@ class ArticlePolicy < ApplicationPolicy
     create?
   end
 
-  def edit
-    user.record == user
+  def update
+    true
   end
 
-  def update
-    edit?
+  def edit
+    true
   end
 
   def destroy

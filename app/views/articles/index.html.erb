@@ -4,9 +4,12 @@
   <% if article.themes.downcase == params[:themes] %>
     <p>
       <%= article.title %>
-      <%= article.content %>
+
+      <%= link_to 'Lire', article_path(article) %>
+      <%= link_to "Editer l'article", edit_article_path(article) %>
     </p>
   <% end %>
 <% end %>
 
 <%= link_to 'Créer un article', new_article_path %>
+

@@ -28,8 +28,9 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    authorize @article
+
     @article.update(article_params)
+    authorize @article
 
     redirect_to root_path
   end
