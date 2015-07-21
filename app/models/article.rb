@@ -25,7 +25,9 @@ class Article < ActiveRecord::Base
   belongs_to :user
 
   has_attached_file :picture,
-    styles: { medium: "300x300>", thumb: "100x100>" }
+    styles: { medium: "300x300>", thumb: "100x100>" },
+    :storage => :s3,
+    :bucket  => ENV['journal-yann-production']
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
