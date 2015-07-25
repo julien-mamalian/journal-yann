@@ -3,7 +3,7 @@
 # Table name: articles
 #
 #  id                   :integer          not null, primary key
-#  content              :string
+#  content              :text
 #  first                :boolean
 #  title                :string
 #  description          :string
@@ -23,9 +23,15 @@
 
 class Article < ActiveRecord::Base
   belongs_to :user
+  has_and_belongs_to_many(:articles,
+    :join_table => "article_connections",
+    :foreign_key => "article_a_id",
+    :association_foreign_key => "article_b_id")
 
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
+
+
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/

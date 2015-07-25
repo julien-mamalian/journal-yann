@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721202020) do
+ActiveRecord::Schema.define(version: 20150724113726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "article_connections", id: false, force: :cascade do |t|
+    t.integer  "article_a_id", null: false
+    t.integer  "article_b_id", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "articles", force: :cascade do |t|
-    t.string   "content"
+    t.text     "content"
     t.boolean  "first"
     t.string   "title"
     t.string   "description"
@@ -48,6 +55,10 @@ ActiveRecord::Schema.define(version: 20150721202020) do
     t.datetime "updated_at",                          null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

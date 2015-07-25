@@ -11,7 +11,11 @@ gem "high_voltage"
 gem "devise"
 gem "pundit"
 gem "paperclip"
+gem "redcarpet"
+gem 'ransack'
+gem 'rails-bootstrap-markdown'
 gem "aws-sdk", "< 2.0"
+
 
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0"

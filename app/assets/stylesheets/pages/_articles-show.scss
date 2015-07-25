@@ -1,0 +1,22 @@
+.articles-show {
+  img {
+    max-width: 100%;
+  }
+  .logo_space {
+    display: none;
+  }
+  .navbar {
+    margin-bottom: 0px;
+    position: fixed;
+    z-index: 20000;
+    background-opacity: 0;
+  }
+  .navigation {
+    margin-top: 0px;
+    -moz-box-shadow: 10px 10px 8px 0px #656565;
+    -webkit-box-shadow: 10px 10px 8px 0px #656565;
+    -o-box-shadow: 10px 10px 8px 0px #656565;
+    box-shadow: 10px 10px 8px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=8);
+  }
+}

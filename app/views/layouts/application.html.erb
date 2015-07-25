@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class='<%= "#{params[:controller]}-#{params[:action]}" %>'>
 <head>
   <title><%= yield(:title) || "Wagon Rails" %></title>
   <meta name="description" content="<%= (yield(:description) || "").squish %>">
@@ -19,6 +19,10 @@
 
   <%= javascript_include_tag :application %>
   <%= yield(:after_js) %>
+  <script>
 
+        window.sr = new scrollReveal();
+
+      </script>
 </body>
 </html>

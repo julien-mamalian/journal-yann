@@ -5,7 +5,7 @@
   <%= f.input :title, class:'form_rounded_style' %>
   <%= f.hidden_field :user_id, :value => current_user.id%>
   <%= f.label :content, class:'form_rounded_style' %>
-  <%= f.text_area :content%>
+  <%= f.text_area :content, data: {provide: "markdown"} %>
   <%= f.input :themes%>
   <%= f.label :picture %>
   <%= f.file_field :picture %>

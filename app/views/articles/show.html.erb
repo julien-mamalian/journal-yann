@@ -1,9 +1,6 @@
 <div id="container" class="container intro-effect-fadeout article-show-content">
       <!-- Top Navigation -->
-      <div class="codrops-top clearfix">
-        <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/SamsungGrid/"><span>Previous Demo</span></a>
-        <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19119"><span>Back to the Codrops Article</span></a></span>
-      </div>
+
       <header class="header">
         <div class="bg-img"><%= image_tag @article.picture %></div>
         <div class="title">
@@ -14,12 +11,35 @@
       </header>
       <button class="trigger" data-info="Cliquez pour lire l'article"><span></span></button>
       <article class="content">
+
+          <%= image_tag @article.user.picture, class:'img-circle user_picture' %>
+
         <div>
-          <%= @article.content %>
+          <%= markdown_to_html(@article.content) %>
         </div>
       </article>
-    </div><!-- /container -->
 
+    </div><!-- /container -->
+    <script>
+      // navbar transition jQuery script
+      $(window).scroll(function(e){
+        if ($(this).scrollTop() > 0) {
+          $(".navbar").css({
+            "background-image": "url('blur.jpg')"
+          });
+        }
+        else {
+
+          $(".navbar").css({
+            "background-image": "",
+            "background": "transparent",
+            "box-shadow": "0 0 0px transparent"
+          });
+        }
+      });
+
+
+    </script>
     <script>
       (function() {
 
@@ -162,3 +182,4 @@
         trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
       })();
     </script>
+

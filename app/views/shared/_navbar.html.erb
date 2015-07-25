@@ -1,45 +1,106 @@
-<nav>
+<nav class='cl-effect-21'>
   <div class="container-fluid navigation ">
-    <div class="col-md-12 logo_space text-center">
-      <%= image_tag 'logo.png', :class => 'img-circle logo' %>
+    <div class="col-md-12 logo_space text-center" id='logo_id'>
+      <%= image_tag 'AYA-logo.png', :class => 'img-circle logo' %>
     </div>
+
+
       <div class="col-md-12 navbar text-center">
         <ul class="navbar_ul">
-          <li class="navbar_link">
+          <li class="navbar_link ">
             <%= link_to root_path do %>
               <i class="fa fa-home"></i> Home
             <% end %>
           </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/politique' do %>
-              <i class="fa fa-university"></i> Politique
-            <% end %>
-          </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/economie' do %>
-              <i class="fa fa-eur"></i> Economie
-            <% end %>
-          </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/international' do %>
-              <i class="fa fa-globe"></i> International
-            <% end %>
-          </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/droit' do %>
-              <i class="fa fa-gavel"></i> Droit
-            <% end %>
-          </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/culture' do %>
-              <i class="fa fa-book"></i> Culture
-            <% end %>
-          </li>
-          <li class="navbar_link">
-            <%= link_to 'http://journal-yann-production.herokuapp.com/le-havre' do %>
-              <i class="fa fa-building-o"></i> Le Havre
-            <% end %>
-          </li>
+
+          <% if params[:themes] == "politique" %>
+            <li class="navbar_link activ">
+              <%= link_to 'http://localhost:3000/politique', {:class => "active"} do %>
+                <i class="fa fa-university"></i> Politique
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/politique' do %>
+                <i class="fa fa-university"></i> Politique
+              <% end %>
+            </li>
+          <% end %>
+
+
+
+          <% if params[:themes] == "economie" %>
+            <li class="navbar_link activ">
+              <%= link_to 'http://localhost:3000/economie', {:class => "active"} do %>
+                <i class="fa fa-eur"></i> Economie
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/economie' do %>
+                <i class="fa fa-eur"></i> Economie
+              <% end %>
+            </li>
+          <% end %>
+
+
+          <% if params[:themes] == "international" %>
+            <li class="navbar_link activ">
+              <%= link_to 'http://localhost:3000/international', {:class => "active"} do %>
+                <i class="fa fa-globe"></i> International
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/international' do %>
+                <i class="fa fa-globe"></i> International
+              <% end %>
+            </li>
+          <% end %>
+
+           <% if params[:themes] == "droit" %>
+            <li class="navbar_link activ ">
+              <%= link_to 'http://localhost:3000/droit', {:class => "active"} do %>
+                <i class="fa fa-gavel"></i> Droit
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/droit' do %>
+                <i class="fa fa-gavel"></i> Droit
+              <% end %>
+            </li>
+          <% end %>
+
+          <% if params[:themes] == "culture" %>
+            <li class="navbar_link activ ">
+              <%= link_to 'http://localhost:3000/culture', {:class => "active"} do %>
+                <i class="fa fa-eur active"></i> Culture
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/culture' do %>
+                <i class="fa fa-eur"></i> Culture
+              <% end %>
+            </li>
+          <% end %>
+
+          <% if params[:themes] == "le-havre" %>
+            <li class="navbar_link activ">
+              <%= link_to 'http://localhost:3000/le-havre', {:class => "active"} do %>
+                <i class="fa fa-building-o"></i> Le Havre
+              <% end %>
+            </li>
+          <% else %>
+            <li class="navbar_link ">
+              <%= link_to 'http://localhost:3000/le-havre' do %>
+                <i class="fa fa-building-o"></i> Le Havre
+              <% end %>
+            </li>
+          <% end %>
+
+
         </ul>
       </div>
   </div>

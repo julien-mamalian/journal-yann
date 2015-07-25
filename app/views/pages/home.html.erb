@@ -16,6 +16,9 @@
       <p>
         <%= link_to 'Liste des articles', articles_path %>
         <%= link_to 'Créer un article', new_article_path %>
+        <% if user_signed_in? %>
+          <%= link_to 'Editer le profil', edit_user_registration_path %>
+        <% end %>
       </p>
 
       <p>

@@ -39,30 +39,94 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
+
+ *,
+ *:after,
+ *::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
+
+ .active {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  pointer-events: none;
+  cursor: default;
+  }
+
+ nav a:hover,
+nav a:focus {
+  outline: none;
+}
+
+ .none {
+  display: none;
+ }
+
 .navigation {
-  margin-top: 25px;
+
+
+  a {
+    color: white;
+  }
 
   .logo_space {
     height: $navbar-height;
     margin-bottom: 25px;
-    widows: 100%;
+    width: 100%;
     .logo {
-      height: 45px;
-      width: 45px;
+      height: 150px;
+      width: 150px;
+      margin-top: -45px;
+      padding-top: 20px;
     }
   }
+
+  .navbar_link:not(.activ):hover {
+    border-style: solid;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: none;
+    border-right: none;
+    color: white !important;
+  }
+
+
+  a:hover {
+    color: white;
+  }
+
   .navbar {
-    heigt: $navbar-height;
+    position: relative;
+    height: 80px !important;
     width : 100%;
+    background-image: url('blur.jpg');
+    background-size: cover;
+    background-position: center;
+
+     ul {
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+     }
 
     .navbar_link {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      transition: border 0.5s ease;
       display: inline;
       margin-left: 15px;
       margin-right: 15px;
-      font-family: Cooperhewitt-book, sans-serif;
+      font-family: 'feathericons', sans-serif;
       text-transform: uppercase;
       font-size: 18px;
       letter-spacing: 2px;
+      color:white;
+      width: 100%;
     }
   }
 }
