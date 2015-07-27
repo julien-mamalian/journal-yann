@@ -5,15 +5,58 @@
 <%= content_for(:description) do %>
   <%# TODO %>
 <% end %>
+<div class="col-xs-9 ">
+  <div class="marley-animated col-xs-12 " data-sr="move, opacity 0.4, over 1.8s">
+    <div class="grid ">
+      <div class="">
+        &nbsp;
+        <figure class="effect-marley ">
+          <%= image_tag @first[0].picture %>
+          <figcaption>
+            <h3> <%= @first[0].title %> </h3>
+            <p><%= markdown_to_html(@first[0].content.split(" ").first(35).join(" ") + "...") %></p>
+            <%= link_to 'LIRE', article_path(@first[0]) %>
 
-<div class="col-xs-12">
-  <%=  @first %>
-</div>
-<% @second.each do |article| %>
-  <div class="col-xs-6">
-    <%= image_tag article.picture, class:"second_picture" %>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+
   </div>
-<% end %>
+  <% @second.each do |article| %>
+    <div class="marley-animated col-xs-6 " data-sr="move, opacity 0.4, over 1.8s">
+      <div class="grid ">
+        <div class="">
+          &nbsp;
+          <figure class="effect-marley ">
+            <%= image_tag article.picture %>
+            <figcaption>
+              <h3> <%= article.title %> </h3>
+              <p><%= markdown_to_html(article.content.split(" ").first(35).join(" ") + "...") %></p>
+              <%= link_to 'LIRE', article_path(article) %>
+
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="col-xs-3">
+<br><br>
+  <div class="side-bar">
+    Articles à la Une
+    <div class='background-side'></div>
+    <br>
+
+    <p>
+      Les niches fiscales ont beau être rabotées d’année en année, il s’en crée toujours de nouvelles. La loi du 17 avril 2015 institue une réduction d’impôt pour investissement au capital d’entreprises de presse. Elle est précisée par un décret paru le 24 juillet au Journal Officiel. Explications.
+      En savoir plus sur http://www.lesechos.fr/?orH8mmTt5FFPLVix.99
+    </p>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">

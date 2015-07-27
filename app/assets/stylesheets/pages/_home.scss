@@ -4,6 +4,14 @@
  * ------------------------------------- */
 .second_picture {
   width: 100%;
-  height: 550px;
-  object-cover: fit;
+  height: 450px;
+  object-fit: cover;
 }
+
+.first_picture {
+  width: 100%;
+  height: 650px;
+  object-fit: cover ;
+  image-poition: bottom;
+}
+

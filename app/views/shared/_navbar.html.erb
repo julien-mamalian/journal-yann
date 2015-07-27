@@ -9,20 +9,20 @@
         <ul class="navbar_ul">
           <li class="navbar_link ">
             <%= link_to root_path do %>
-              <i class="fa fa-home"></i> Home
+    Home
             <% end %>
           </li>
 
           <% if params[:themes] == "politique" %>
             <li class="navbar_link activ">
               <%= link_to 'http://localhost:3000/politique', {:class => "active"} do %>
-                <i class="fa fa-university"></i> Politique
+                 Politique
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/politique' do %>
-                <i class="fa fa-university"></i> Politique
+                 Politique
               <% end %>
             </li>
           <% end %>
@@ -32,13 +32,13 @@
           <% if params[:themes] == "economie" %>
             <li class="navbar_link activ">
               <%= link_to 'http://localhost:3000/economie', {:class => "active"} do %>
-                <i class="fa fa-eur"></i> Economie
+                 Economie
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/economie' do %>
-                <i class="fa fa-eur"></i> Economie
+                 Economie
               <% end %>
             </li>
           <% end %>
@@ -47,13 +47,13 @@
           <% if params[:themes] == "international" %>
             <li class="navbar_link activ">
               <%= link_to 'http://localhost:3000/international', {:class => "active"} do %>
-                <i class="fa fa-globe"></i> International
+                 International
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/international' do %>
-                <i class="fa fa-globe"></i> International
+                 International
               <% end %>
             </li>
           <% end %>
@@ -61,13 +61,13 @@
            <% if params[:themes] == "droit" %>
             <li class="navbar_link activ ">
               <%= link_to 'http://localhost:3000/droit', {:class => "active"} do %>
-                <i class="fa fa-gavel"></i> Droit
+                 Droit
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/droit' do %>
-                <i class="fa fa-gavel"></i> Droit
+                 Droit
               <% end %>
             </li>
           <% end %>
@@ -75,13 +75,13 @@
           <% if params[:themes] == "culture" %>
             <li class="navbar_link activ ">
               <%= link_to 'http://localhost:3000/culture', {:class => "active"} do %>
-                <i class="fa fa-eur active"></i> Culture
+                 Culture
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/culture' do %>
-                <i class="fa fa-eur"></i> Culture
+                Culture
               <% end %>
             </li>
           <% end %>
@@ -89,13 +89,13 @@
           <% if params[:themes] == "le-havre" %>
             <li class="navbar_link activ">
               <%= link_to 'http://localhost:3000/le-havre', {:class => "active"} do %>
-                <i class="fa fa-building-o"></i> Le Havre
+                Le Havre
               <% end %>
             </li>
           <% else %>
             <li class="navbar_link ">
               <%= link_to 'http://localhost:3000/le-havre' do %>
-                <i class="fa fa-building-o"></i> Le Havre
+                 Le Havre
               <% end %>
             </li>
           <% end %>
