@@ -6,6 +6,15 @@
   <%# TODO %>
 <% end %>
 
+<div class="col-xs-12">
+  <%=  @first %>
+</div>
+<% @second.each do |article| %>
+  <div class="col-xs-6">
+    <%= image_tag article.picture, class:"second_picture" %>
+  </div>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">

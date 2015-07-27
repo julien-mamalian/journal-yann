@@ -2,3 +2,8 @@
  * SASS code SPECIFIC TO your home page
  * (margin/padding adjustments, background image, etc..)
  * ------------------------------------- */
+.second_picture {
+  width: 100%;
+  height: 550px;
+  object-cover: fit;
+}

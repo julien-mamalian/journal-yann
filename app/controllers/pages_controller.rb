@@ -1,8 +1,9 @@
-class ArticlesController < ApplicationController
-  before_action :find_article, only: [:show, :edit, :update, :destroy]
+class PagesController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def home
-    @articles = policy_scope(Article)
+    @first = Article.where(first: true)
+    @second = Article.where(second: true)
   end
 end
