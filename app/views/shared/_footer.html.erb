@@ -1,13 +1,14 @@
-<div class="container-fluid footer">
-  <div class="col-md-4 footer-info"></div>
-  <div class="col-md-1"></div>
-  <div class="col-md-7 footer-connect">
+<div class="container-fluid footer footer-css">
+  <div class="col-xs-12 footer-connect">
     <ul>
       <% if user_signed_in? %>
         <li>
           <%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Sign out" %>
           <% end %>
+        </li>
+         <li>
+          <%= link_to 'Mon espace journaliste', account_path %>
         </li>
       <% else %>
         <li>

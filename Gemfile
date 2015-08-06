@@ -15,6 +15,7 @@ gem "redcarpet"
 gem 'ransack'
 gem 'rails-bootstrap-markdown'
 gem "aws-sdk", "< 2.0"
+gem 'activeadmin', github: 'activeadmin'
 
 
 gem "jquery-rails"

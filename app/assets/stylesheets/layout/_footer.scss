@@ -1,1 +1,14 @@
 // Your footer style
+.footer {
+  .footer-connect {
+    background-color: #64B69D;
+    margin-top: 25px;
+    a {
+      color: white;
+    }
+    li {
+      color: white;
+      list-style-type: none;
+    }
+  }
+}

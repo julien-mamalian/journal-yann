@@ -47,7 +47,7 @@
 <div class="col-xs-3">
 <br><br>
   <div class="side-bar">
-    Articles à la Une
+    <p><strong>Articles à la Une</strong></p>
     <div class='background-side'></div>
     <br>
 
@@ -55,30 +55,5 @@
       Les niches fiscales ont beau être rabotées d’année en année, il s’en crée toujours de nouvelles. La loi du 17 avril 2015 institue une réduction d’impôt pour investissement au capital d’entreprises de presse. Elle est précisée par un décret paru le 24 juillet au Journal Officiel. Explications.
       En savoir plus sur http://www.lesechos.fr/?orH8mmTt5FFPLVix.99
     </p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h1>Welcome!</h1>
-
-      <h2>This is the homepage</h2>
-
-      <p>
-        <%= link_to 'Liste des articles', articles_path %>
-        <%= link_to 'Créer un article', new_article_path %>
-        <% if user_signed_in? %>
-          <%= link_to 'Editer le profil', edit_user_registration_path %>
-        <% end %>
-      </p>
-
-      <p>
-        Thanks to the <a href="https://github.com/thoughtbot/high_voltage">high_voltage</a>
-        gem, if you need more static pages (like <code>/contact</code> or <code>/about-us</code>),
-        just create a file in the <code>app/views/pages</code> folder, the route will be automatically
-        available without you adding any controller or touching the <code>config/routes.rb</code> file!
-      </p>
-    </div>
   </div>
 </div>
