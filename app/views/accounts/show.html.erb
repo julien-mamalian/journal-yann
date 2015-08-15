@@ -1,3 +1,29 @@
-hello all
 
-<% @user.first_name %>
+<div class="journaliste_space">
+  <br>
+  <h2 class="text-center">Bienvenue dans votre espace journaliste</h2>
+<br><br>
+  <%= link_to account_my_articles_path do %>
+    <div class="col-lg-6 text-center">
+      Consulter mes articles <br>
+      <i class="fa fa-archive fa-2x "></i>
+    </div>
+  <% end %>
+  <%= link_to new_article_path do %>
+    <div class="col-lg-6 text-center">
+      Ecrire un nouvel article <br>
+      <i class="fa fa-pencil fa-2x "></i>
+    </div>
+  <% end %>
+  <div class="col-lg-12"><br><br></div>
+  <%= link_to edit_user_registration_path do %>
+    <div class="col-lg-6 text-center">
+      Editer mon profil <br>
+      <i class="fa fa-user fa-2x "></i>
+    </div>
+  <% end %>
+  <div class="col-lg-6 text-center">
+    Consulter l'annuaire des journalistes <br>
+    <i class="fa fa-fax fa-2x "></i>
+  </div>
+</div>

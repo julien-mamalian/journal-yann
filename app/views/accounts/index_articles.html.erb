@@ -1,0 +1,19 @@
+<br><br>
+<div class="my_articles_page text-center">
+  <div class="container">
+    <% @articles.each do |article| %>
+      <div class="col-lg-3 my_articles text-center" style='background-image:url("<%= article.picture %>.png"'>
+        <h5><%= article.title %></h5>
+        <br><br>
+        <div class="col-lg-12">
+          <%= link_to "Voir l'article",  article_path(article), :class => "btn btn-primary form_control" %>
+          <%= link_to "Editer l'article", edit_article_path(article), :class => "btn btn-primary form_control" %>
+        </div>
+        <br>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

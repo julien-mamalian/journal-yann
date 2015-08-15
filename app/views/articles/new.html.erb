@@ -1,14 +1,16 @@
-<p> Hello all</p>
 
-<%= simple_form_for(@article, html: { multipart: true }) do |f| %>
+<div class="text-center">
+  <br><br>
+  <%= simple_form_for(@article, html: { multipart: true }) do |f| %>
 
-  <%= f.input :title, class:'form_rounded_style' %>
-  <%= f.hidden_field :user_id, :value => current_user.id%>
-  <%= f.label :content, class:'form_rounded_style' %>
-  <%= f.text_area :content, data: {provide: "markdown"} %>
-  <%= f.input :themes%>
-  <%= f.label :picture %>
-  <%= f.file_field :picture %>
+    <%= f.input :title, class:'form_rounded_style' %>
+    <%= f.hidden_field :user_id, :value => current_user.id%>
+    <%= f.label :content, class:'form_rounded_style' %>
+    <%= f.text_area :content, data: {provide: "markdown"} %>
+    <%= f.input :themes%>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
 
-  <%= f.button :submit %>
-<% end %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
