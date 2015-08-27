@@ -1,0 +1,22 @@
+<%= @articles.each do |article| %>
+  <div class="marley-animated col-xs-6 " data-sr="move, opacity 0.4, over 1.8s">
+    <div class="grid ">
+      <div class="">
+        &nbsp;
+        <figure class="effect-marley ">
+          <%= image_tag article.picture %>
+          <figcaption>
+            <h3> <%= article.title %> </h3>
+            <p><%= markdown_to_html(article.content.split(" ").first(35).join(" ") + "...") %></p>
+            <%= link_to 'LIRE', article_path(article) %>
+
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+
+  </div>
+<% end %>
+
+

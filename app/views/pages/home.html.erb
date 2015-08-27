@@ -50,7 +50,9 @@
     <p><strong>Articles à la Une</strong></p>
     <div class='background-side'></div>
     <br>
-
+    <%= form_tag("  /recherche", :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Rechercher un article", class: 'button_side' %>
+    <% end %>
     <p>
       Les niches fiscales ont beau être rabotées d’année en année, il s’en crée toujours de nouvelles. La loi du 17 avril 2015 institue une réduction d’impôt pour investissement au capital d’entreprises de presse. Elle est précisée par un décret paru le 24 juillet au Journal Officiel. Explications.
       En savoir plus sur http://www.lesechos.fr/?orH8mmTt5FFPLVix.99

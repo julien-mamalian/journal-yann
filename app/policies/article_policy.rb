@@ -5,7 +5,11 @@ class ArticlePolicy < ApplicationPolicy
     end
   end
 
-   def create?
+  def searching?
+    true
+  end
+
+  def create?
     true
   end
 

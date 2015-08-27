@@ -36,4 +36,9 @@ class Article < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
+
+  def self.search(search)
+    Article.where('title LIKE ?', "%#{search}%")
+    Article.where('content LIKE ?', "%#{search}%")
+  end
 end

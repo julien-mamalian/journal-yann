@@ -18,9 +18,13 @@ class AccountsController < ApplicationController
     redirect_to account_path
   end
 
+  def annuaire
+    @users = User.all
+  end
+
   private
   def user_params
-    params.require(:user).permit(:name, :description, :picture)
+    params.require(:user).permit(:picture, :first_name, :last_name)
   end
 
   def set_user

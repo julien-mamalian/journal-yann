@@ -3,13 +3,24 @@ class ArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
     @articles = policy_scope(Article)
-    @q = Article.ransack(params[:q])
-    @people = @q.result(distinct: true)
+    word = params[:search]
+    if params[:search]
+      @articles = Article.where("title LIKE ?", "%#{word}%")
+    else
+      @articles = Article.all
+    end
 
-    @search = Article.search(params[:q])
-    @articles = @search.result
+  end
+
+  def searching
+    @articles = policy_scope(Article)
+    word = params[:search]
+    if params[:search]
+      @articles = Article.where("title LIKE ?", "%#{word}%")
+    else
+      @articles = Article.all
+    end
   end
 
   def show
