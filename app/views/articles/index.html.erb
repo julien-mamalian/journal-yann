@@ -1,6 +1,6 @@
 <div class="col-xs-9">
   <% @articles.each do |article| %>
-    <% unless article.themes.blank? %>
+    <% unless article.themes.blank? || article.publish == false %>
       <% if article.themes.downcase == params[:themes] %>
         <div class="marley-animated col-xs-6 " data-sr="move, opacity 0.4, over 1.8s">
           <div class="grid ">
@@ -23,9 +23,6 @@
       <% end %>
     <% end %>
   <% end %>
-  <div class="col-xs-12">
-    <%= link_to 'Créer un article', new_article_path %>
-  </div>
 </div>
 
 <div class="col-xs-3">

@@ -5,6 +5,10 @@ class ArticlePolicy < ApplicationPolicy
     end
   end
 
+  def show?
+    scope.where(:id => record.id).exists? || scope.publish == true
+  end
+
   def searching?
     true
   end
@@ -17,15 +21,15 @@ class ArticlePolicy < ApplicationPolicy
     create?
   end
 
-  def update
+  def update?
     true
   end
 
-  def edit
+  def edit?
     true
   end
 
-  def destroy
+  def destroy?
     record.user == user
   end
 end

@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
 
-permit_params :first_name, :last_admin, :admin, :email
+permit_params :first_name, :last_admin, :admin, :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, :last_sign_in_ip, :last_name, :picture_file_name, :picture_content_type, :picture_file_size, :picture_updated_at
 index do
     selectable_column
     column :id

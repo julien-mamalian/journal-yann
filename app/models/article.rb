@@ -2,20 +2,20 @@
 #
 # Table name: articles
 #
-#  id                   :integer          not null, primary key
-#  content              :text
-#  first                :boolean
-#  title                :string
-#  description          :string
-#  themes               :string
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  user_id              :integer
-#  picture_file_name    :string
-#  picture_content_type :string
-#  picture_file_size    :integer
-#  picture_updated_at   :datetime
-#  second               :boolean
+#  id                 :integer          not null, primary key
+#  content            :text
+#  first              :boolean
+#  title              :string
+#  description        :string
+#  themes             :string
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  user_id            :integer
+#  picture_file_name  :string
+#  picture_file_size  :integer
+#  picture_updated_at :datetime
+#  second             :boolean
+#  publish            :boolean          default(FALSE)
 #
 # Indexes
 #

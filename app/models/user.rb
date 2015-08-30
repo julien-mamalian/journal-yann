@@ -18,10 +18,10 @@
 #  first_name             :string
 #  last_name              :string
 #  picture_file_name      :string
-#  picture_content_type   :string
 #  picture_file_size      :integer
 #  picture_updated_at     :datetime
 #  admin                  :boolean          default(FALSE), not null
+#  picture_content_type   :string
 #
 # Indexes
 #

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806131039) do
+ActiveRecord::Schema.define(version: 20150830184707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150806131039) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "article_connections", id: false, force: :cascade do |t|
+  create_table "article_connections", force: :cascade do |t|
     t.integer  "article_a_id", null: false
     t.integer  "article_b_id", null: false
     t.datetime "created_at",   null: false
@@ -44,14 +44,14 @@ ActiveRecord::Schema.define(version: 20150806131039) do
     t.string   "title"
     t.string   "description"
     t.string   "themes"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "user_id"
     t.string   "picture_file_name"
-    t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.boolean  "second"
+    t.boolean  "publish",            default: false
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
@@ -72,10 +72,10 @@ ActiveRecord::Schema.define(version: 20150806131039) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "picture_file_name"
-    t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.boolean  "admin",                  default: false, null: false
+    t.string   "picture_content_type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

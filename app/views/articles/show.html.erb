@@ -12,12 +12,48 @@
       <button class="trigger" data-info="Cliquez pour lire l'article"><span></span></button>
       <article class="content">
 
-          <%= image_tag @article.user.picture, class:'img-circle user_picture' %>
 
-        <div>
-          <%= markdown_to_html(@article.content) %>
+        <div class="row">
+          <div class="col-xs-12 text-center" >
+            <%= markdown_to_html(@article.content) %>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <hr>
+          </div>
+          <br><br><br>
+
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 text-left">
+            <% unless @article.articles.blank? %>
+                <h4>Articles liés</h4> <br>
+                <% @article.articles.each do |linked_article| %>
+                  <% if linked_article.publish %>
+                    <div class="row">
+                      <div class=" col-xs-3">
+                        <%= image_tag linked_article.picture, class:' medium-image' %>
+                      </div>
+                      <div class="col-xs-8  col-xs-offset-1">
+                        <%= linked_article.title %>
+                        <br> <h5><%= link_to "Lire l'article", article_path(linked_article) %></h5>
+                      </div>
+
+                    </div>
+                    <br>
+                  <% end %>
+                <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
+
+
       </article>
+
 
     </div><!-- /container -->
 

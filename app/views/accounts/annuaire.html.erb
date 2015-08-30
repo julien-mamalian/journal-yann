@@ -1,3 +1,19 @@
-<%= @users.each do |user| %>
-  <% user %>
+<div class="text-center">
+  <h2>Annuaire</h2>
+</div>
+
+<% @users.each do |user| %>
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-3">
+      <% if user.picture? %>
+        <%= image_tag user.picture, class: 'img-circle medium-image' %>
+      <% end %>
+    </div>
+    <div class="col-xs-7  ">
+      <%= user.last_name %> <%= user.first_name %>
+      <br>
+      <strong>Email:</strong> <%= user.email %>
+    </div>
+  </div>
+  <br>
 <% end %>

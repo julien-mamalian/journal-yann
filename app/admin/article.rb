@@ -1,6 +1,7 @@
 ActiveAdmin.register Article do
 
-permit_params :first, :title, :description, :themes, :user_id, :second, :articles
+permit_params :first, :title, :description, :themes, :user_id, :second, :articles, :publish, :contentpicture_file_name, :picture_file_size, :picture_updated_at, :content, :picture_file_name
+actions :all
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -25,6 +26,7 @@ index do
     column :article_a_id
     column :article_b_id
     column :articles
+    column :publish
     actions
   end
 end
