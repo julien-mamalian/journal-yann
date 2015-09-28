@@ -13,7 +13,6 @@
     padding: 0 0;
   }
   p {
-    font-size: 20px;
     color: $green;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -27,7 +26,9 @@
   }
 }
 
-
+#searching-small-device {
+  margin-top: 50px;
+}
 
 .button_side {
   border: solid 0.5px grey;

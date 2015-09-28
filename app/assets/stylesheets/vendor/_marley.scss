@@ -9,6 +9,83 @@
     url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
     url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
+@media screen and (max-width: 769px) {
+  .marley-animated {
+    p {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+
+
+
+  /*---------------*/
+  /***** Marley *****/
+  /*---------------*/
+
+  figure.effect-marley figcaption {
+    text-align: right;
+  }
+
+  figure.effect-marley h3,
+  figure.effect-marley p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+  }
+
+
+  figure.effect-marley p {
+    bottom: 30px;
+    line-height: 1.5;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+
+  figure.effect-marley h3 {
+    top: 30px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+  }
+
+  figure.effect-marley:hover h3 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+      color: $green;
+  }
+
+  figure.effect-marley h3::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: $green;   // ligne
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+
+  }
+
+  figure.effect-marley h3::after,
+  figure.effect-marley p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+  }
+
+  figure.effect-marley:hover h3::after,
+  figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+}
 .pages-home {
   .grid {
     position: relative;
@@ -34,11 +111,36 @@
   margin: 10px 60px;
   min-width: 320px;
   // max-width: 80%;
-  height: 450px;
   object-fit : cover;
   background: #3085a3;
   text-align: center;
   cursor: pointer;
+}
+
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+  .grid figure {
+    height: 280px;
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .grid figure {
+    height: 280px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .grid figure {
+    height: 330px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1349px) {
+ .grid figure {
+   height: 360px;
+ }
+}
+@media screen and (min-width: 1350px) {
+  .grid figure {
+    height: 450px;
+  }
 }
 
 .grid figure img {
@@ -54,7 +156,6 @@
   padding: 2em;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.25em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -100,73 +201,6 @@
 
 .grid figure p {
   letter-spacing: 1px;
-  font-size: 68.5%;
-}
-
-
-
-
-/*---------------*/
-/***** Marley *****/
-/*---------------*/
-
-figure.effect-marley figcaption {
-  text-align: right;
-}
-
-figure.effect-marley h3,
-figure.effect-marley p {
-  position: absolute;
-  right: 30px;
-  left: 30px;
-  padding: 10px 0;
-}
-
-
-figure.effect-marley p {
-  bottom: 30px;
-  line-height: 1.5;
-  -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0);
-}
-
-figure.effect-marley h3 {
-  top: 30px;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: translate3d(0,20px,0);
-  transform: translate3d(0,20px,0);
-}
-
-figure.effect-marley:hover h3 {
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-    color: $green;
-}
-
-figure.effect-marley h3::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: $green;   // ligne
-  content: '';
-  -webkit-transform: translate3d(0,40px,0);
-  transform: translate3d(0,40px,0);
 
 }
 
-figure.effect-marley h3::after,
-figure.effect-marley p {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-marley:hover h3::after,
-figure.effect-marley:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
