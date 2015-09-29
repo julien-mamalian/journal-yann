@@ -4,7 +4,7 @@
       <header class="header">
         <div class="bg-img"><%= image_tag @article.picture %></div>
         <div class="title">
-          <h1><%= @article.title %></h1>
+          <h1 class="text-center"><%= @article.title %></h1>
           <p class="subline">Inspiration for Article Intro Effects</p>
           <p>par <strong><%= @article.user.first_name %> <%= @article.user.last_name %></strong> &#8212; le <strong><%= @article.created_at.day %>/0<%= @article.created_at.month %>/<%= @article.created_at.year%></strong></p>
         </div>

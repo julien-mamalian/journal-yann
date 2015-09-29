@@ -1,18 +1,18 @@
-<div class="col-xs-12 hidden-md hidden-lg text-center" id='searching-small-device'>
+<div class="col-xs-12 hidden-lg text-center" id='searching-small-device'>
   <div class="text-center">
     <% thema = params[:themes] %>
     <%= form_tag("/#{thema}", :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Rechercher dans #{thema}", class: 'button_side' %>
+      <%= text_field_tag :search, params[:search], placeholder: "   Rechercher dans #{thema}", class: 'button_side' %>
     <% end %>
   <br>
   </div>
 </div>
 
-<div class="col-xs-12 col-sm-12 col-md-9">
+<div class="col-xs-12 col-lg-9">
   <% @articles.each do |article| %>
     <% unless article.themes.blank? || article.publish == false %>
       <% if article.themes.downcase == params[:themes] %>
-        <div class="marley-animated col-xs-12 col-lg-6 " data-sr="move, opacity 0.4, over 1.8s">
+        <div class="marley-animated col-xs-12 col-md-6 " data-sr="move, opacity 0.4, over 1.8s">
           <div class="grid ">
             <div class="">
               &nbsp;
@@ -20,7 +20,7 @@
                 <%= image_tag article.picture %>
                 <figcaption>
                   <h3> <%= article.title %> </h3>
-                  <p><%= markdown_to_html(article.content.split(" ").first().join(" ") + "...") %></p>
+                  <p><%= markdown_to_html(article.content.split(" ").first(20).join(" ") + "...") %></p>
                   <%= link_to 'LIRE', article_path(article) %>
 
                 </figcaption>
@@ -35,7 +35,7 @@
   <% end %>
 </div>
 
-<div class="hidden-xs hidden-sm col-md-3">
+<div class="hidden-xs hidden-sm hidden-md col-lg-3">
 <br><br>
   <div class="side-bar">
     <div class='background-side'></div>
@@ -43,7 +43,7 @@
     <div class="text-left">
       <% thema = params[:themes] %>
       <%= form_tag("/#{thema}", :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Rechercher dans #{thema}", class: 'button_side' %>
+        <%= text_field_tag :search, params[:search], placeholder: "  Rechercher dans #{thema}", class: 'button_side' %>
       <% end %>
     <br>
     </div>

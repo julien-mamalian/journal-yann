@@ -132,12 +132,17 @@
     height: 330px;
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1349px) {
+@media screen and (min-width: 1000px) and (max-width: 1186px) {
  .grid figure {
-   height: 360px;
+   height: 400px;
  }
 }
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1186px) and (max-width: 1659px) {
+ .grid figure {
+   height: 320px;
+ }
+}
+@media screen and (min-width: 1660px) {
   .grid figure {
     height: 450px;
   }

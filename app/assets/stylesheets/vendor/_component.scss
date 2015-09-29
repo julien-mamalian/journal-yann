@@ -47,6 +47,7 @@
     display: block;
     min-width: 100%;
     min-height: 100%;
+    object-fit : cover;
   }
 
   .title {
@@ -66,8 +67,33 @@
     padding: 0 0 0.2em;
     color: $green;
     font-weight: 800;
-    font-size: 3.25em;
     margin: 0 auto;
+
+    @media screen and (max-device-width: 768px) and (orientation: portrait) {
+      h1 {
+        font-size: 50px !important;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 50px !important;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 999px) {
+      h1 {
+        font-size: 70px !important;
+      }
+    }
+    @media screen and (min-width: 1000px) and (max-width: 1349px) {
+      h1 {
+        font-size: 80px !important;
+      }
+    }
+    @media screen and (min-width: 1350px) {
+      h1 {
+        font-size: 90px !important;
+      }
+    }
   }
 
   .title p {
@@ -101,7 +127,6 @@
     border: none;
     background: transparent;
     color: transparent;
-    font-size: 2em;
     cursor: pointer;
   }
 
@@ -183,7 +208,7 @@
 
   .content h3 {
     margin: 0;
-    font-size: 1.4em;
+    // font-size: 1.4em;
   }
 
   .content blockquote {
