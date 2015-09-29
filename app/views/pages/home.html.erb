@@ -23,7 +23,7 @@
 <div class="col-xs-12 col-lg-9 ">
   <div class="marley-animated col-xs-12 " data-sr="move, opacity 0.4, over 1.8s">
     <div class="grid ">
-      <% if @first %>
+      <% if @first.blank? %>
         <div class="">
           &nbsp;
           <figure class="effect-marley ">
@@ -41,7 +41,7 @@
     </div>
 
   </div>
-  <% if @second %>
+  <% if @second.blank? %>
     <% @second.each do |article| %>
       <div class="marley-animated col-xs-12 col-md-6 " data-sr="move, opacity 0.4, over 1.8s">
         <div class="grid ">
