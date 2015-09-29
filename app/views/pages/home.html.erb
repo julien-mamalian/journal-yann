@@ -23,39 +23,43 @@
 <div class="col-xs-12 col-lg-9 ">
   <div class="marley-animated col-xs-12 " data-sr="move, opacity 0.4, over 1.8s">
     <div class="grid ">
-      <div class="">
-        &nbsp;
-        <figure class="effect-marley ">
-          <%= image_tag @first[0].picture %>
-          <figcaption>
-            <h3> <%= @first[0].title %> </h3>
-            <p><%= markdown_to_html(@first[0].content.split(" ").first(20).join(" ") + "...") %></p>
-            <%= link_to 'LIRE', article_path(@first[0]) %>
-
-          </figcaption>
-        </figure>
-      </div>
-
-    </div>
-
-  </div>
-  <% @second.each do |article| %>
-    <div class="marley-animated col-xs-12 col-md-6 " data-sr="move, opacity 0.4, over 1.8s">
-      <div class="grid ">
+      <% if @first %>
         <div class="">
           &nbsp;
           <figure class="effect-marley ">
-            <%= image_tag article.picture %>
+            <%= image_tag @first[0].picture %>
             <figcaption>
-              <h3> <%= article.title %> </h3>
-              <p><%= markdown_to_html(article.content.split(" ").first(15).join(" ") + "...") %></p>
-              <%= link_to 'LIRE', article_path(article) %>
+              <h3> <%= @first[0].title %> </h3>
+              <p><%= markdown_to_html(@first[0].content.split(" ").first(20).join(" ") + "...") %></p>
+              <%= link_to 'LIRE', article_path(@first[0]) %>
 
             </figcaption>
           </figure>
         </div>
-      </div>
+      <% end %>
+
     </div>
+
+  </div>
+  <% if @second %>
+    <% @second.each do |article| %>
+      <div class="marley-animated col-xs-12 col-md-6 " data-sr="move, opacity 0.4, over 1.8s">
+        <div class="grid ">
+          <div class="">
+            &nbsp;
+            <figure class="effect-marley ">
+              <%= image_tag article.picture %>
+              <figcaption>
+                <h3> <%= article.title %> </h3>
+                <p><%= markdown_to_html(article.content.split(" ").first(15).join(" ") + "...") %></p>
+                <%= link_to 'LIRE', article_path(article) %>
+
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
